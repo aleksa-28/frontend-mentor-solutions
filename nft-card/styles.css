@@ -1,0 +1,97 @@
+:root {
+    --blue-500: hsl(215, 51%, 70%);
+    --cyan-400: hsl(178, 100%, 50%);
+
+    --blue-950: hsl(217, 54%, 11%); /* main BG */
+    --blue-900: hsl(216, 50%, 16%); /* card BG */ 
+    --blue-800: hsl(215, 32%, 27%); /* line */
+    --white: hsl(0, 0%, 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Outfit;
+    font-weight: 300;
+    background-color: var(--blue-950);    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.card {
+    max-width: 320px;
+    padding: 20px;
+    border-radius: 16px;
+    background-color: var(--blue-900);
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.highlight:hover, .heading:hover {
+    color: var(--cyan-400);
+}
+
+.heading {
+    color: var(--white);
+    font-weight: 600;
+}
+
+p {
+    color: var(--blue-500);
+}
+
+.price_text {
+    color: var(--cyan-400);
+}
+
+.time_text {
+    font-weight: 400;
+}
+
+.highlight {
+    color: var(--white);
+}
+
+.pricetime {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price, .time {
+    display: flex;
+    gap: 10px;
+}
+
+.author {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.avatar_img {
+    width: 30px;
+}
+
+.card_img {
+    width: 280px;
+    border-radius: 8px;
+}
+
+hr {
+    border: none;
+    height: 2px;
+    background-color: var(--blue-500);
+    width: 100%;
+    border-radius: 8px;
+}
