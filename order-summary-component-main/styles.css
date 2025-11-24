@@ -1,0 +1,148 @@
+:root {
+  --blue-100: hsl(225, 100%, 94%);
+  --blue-700: hsl(245, 75%, 52%);
+  --blue-700-trans: hsla(245, 75%, 52%, 0.678);
+
+  --blue-50: hsl(225, 100%, 98%);
+  --gray-600: hsl(224, 23%, 55%);
+  --blue-950: hsl(223, 47%, 23%);
+
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(./images/pattern-background-desktop.svg);
+  background-repeat: repeat-x;
+  background-size: auto;
+  background-position: top center;
+  background-color: var(--blue-100);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.card {
+  max-width: 320px;
+  border-radius: 16px;
+  background-color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1.5em;
+  padding-bottom: 20px;
+  box-shadow: 0px 23px 76px -11px rgba(53, 91, 128, 0.26);
+  -webkit-box-shadow: 5px 23px 76px -11px rgba(53, 91, 128, 0.26);
+  -moz-box-shadow: 5px 23px 76px -11px rgba(53, 91, 128, 0.26);
+}
+
+p {
+  max-width: 270px;
+  color: var(--gray-600);
+  text-align: center;
+}
+
+h2, h3 {
+  color: var(--blue-950)
+}
+
+.picture {
+  width: 100%;
+  border-radius: 16px 16px 0px 0px;
+}
+
+.buttons {
+  display: flex;
+  max-width: 270px;
+  flex-direction: column;
+  width: 100%;
+  gap: 1em;
+}
+
+button {
+  max-width: 270px;
+  width: 100%;
+  min-height: 3em;
+  border-radius: 8px;
+  border: none;
+}
+
+.cancel {
+  background-color:transparent;
+  color: var(--gray-600);
+}
+
+.cancel:hover {
+  color: var(--blue-950);
+  cursor: pointer;
+}
+
+.proceed {
+  background-color: var(--blue-700);
+  color: var(--white);
+  box-shadow: 0px 20px 31px -1px rgba(56,41,224,0.23);
+  -webkit-box-shadow: 0px 20px 31px -1px rgba(56,41,224,0.23);
+  -moz-box-shadow: 0px 20px 31px -1px rgba(56,41,224,0.23);
+}
+
+.proceed:hover {
+  background-color: var(--blue-700-trans);
+  cursor: pointer;
+}
+
+.order {
+  background-color: var(--blue-50);
+  padding: 15px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 270px;
+  width: 100%;
+  min-height: 5em;
+}
+
+.order p {
+  text-align: left;
+}
+
+.order a {
+  font-size: 13px;
+  color: var(--blue-700);
+}
+
+.order a:hover {
+  color: var(--blue-700-trans);
+  cursor: pointer;
+}
+
+.red-hat-display-500 {
+  font-size: 16px;
+  font-family: "Red Hat Display", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.red-hat-display-700 {
+  font-size: 16px;
+  font-family: "Red Hat Display", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.red-hat-display-900 {
+  font-size: 16px;
+  font-family: "Red Hat Display", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: bold;
+}
