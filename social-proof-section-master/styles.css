@@ -14,7 +14,7 @@
 }
 
 body {
-    padding: 10em;
+    padding: 8em;
     font-family: League Spartan;
     font-size: 15px;
     background-image: url(./images/bg-pattern-top-desktop.svg), url(./images/bg-pattern-bottom-desktop.svg);
@@ -89,6 +89,7 @@ body {
 }
 
 .reviews {
+    min-height: 310px;
     margin-top: 3em;
     grid-area: reviews;
     display: grid;
@@ -99,6 +100,7 @@ body {
 }
 
 .card {
+    min-height: 260px;
     padding: 2em;
     border-radius: 8px;
     background-color: var(--dark-magenta);
@@ -154,11 +156,31 @@ body {
 
 @media all and (max-width: 850px) {
     body {
-        grid-template-rows: repeat(3, 1fr);
+        padding: 5em;
         grid-template-columns: 1fr;
         grid-template-areas: 
         "text"
-        "ratings"
+        "rating"
         "reviews";
+    }
+
+    .text {
+        justify-content: center;
+    }
+    .text > *{
+        text-align: center;
+    }
+    .rating {
+        justify-content: center;
+    }
+    .reviews {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media all and (max-width: 570px) {
+    body {
+        padding: 2em;
     }
 }
