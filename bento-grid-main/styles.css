@@ -32,21 +32,34 @@ body {
     "write audience grow grow";
     min-height: 100vh;
     font-family: "DM Sans";
+    height: 100%;
     font-size: 18px;
 }
 
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+h2 {
+    font-weight: 500;
+    font-size: 32px;
+}
+
 .card {
+    gap: 1em;
     display: grid;
     border-radius: 16px;
     height: 100%;
     place-items: center;
     width: 100%;
+    padding: 2em;
 }
 
 .create {
     background-color: var(--yellow-100);
     grid-area: create;
-    padding: 3em;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -86,7 +99,6 @@ body {
     background-color: var(--yellow-500);
     grid-area: write;
     place-items: center;
-    padding: 3em;
 }
 
 
@@ -96,8 +108,12 @@ body {
 .schedule {
     background-color: var(--purple-100);
     grid-area: schedule;
-    padding: 3em;
 }
+.schedule > img {
+    margin-right: -6em;
+}
+
+
 .manage {
     background-color: var(--white);
     grid-area: manage;
@@ -105,7 +121,18 @@ body {
 .audience {
     background-color: var(--white);
     grid-area: audience;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 2em;
 }
+.audience > h2 {
+    font-size: 100px;
+    text-align: left;
+}
+
+
 .grow {
     background-color: var(--purple-500);
     grid-area: grow;
@@ -113,20 +140,40 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 2em;
 }
 .maintain {
     background-color: var(--yellow-500);
     grid-area: maintain;
 }
 
-img {
-    max-width: 100%;
-    
-}
 
-
-h2 {
-    font-weight: 500;
-    font-size: 48px;
+@media all and (max-width: 1450px) {
+    body {
+        grid-template-rows: auto;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "social"
+        "manage"
+        "maintain"
+        "schedule"
+        "grow"
+        "audience"
+        "create"
+        "write";
+    }
+    .card {
+        max-width: 800px;
+        gap: 1em;
+        justify-content: center;
+        align-items: center;
+    }
+    .grow {
+        flex-direction: column  ;
+    }
+    .schedule img {
+        margin: 0;
+    }
+    img {
+        max-width: 400px;
+    }
 }
