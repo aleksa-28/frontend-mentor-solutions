@@ -1,120 +1,122 @@
-:root {
-  --purple-50: hsl(260, 100%, 95%);
-  --purple-300: hsl(264, 82%, 80%);
-  --purple-500: hsl(263, 55%, 52%);
-
-  --white: hsl(0, 0%, 100%);
-  --grey-100: hsl(214, 17%, 92%);
-  --grey-200: hsl(0, 0%, 81%);
-  --grey-400: hsl(224, 10%, 45%);
-  --grey-500: hsl(217, 19%, 35%);
-
-  --dark-blue: hsl(219, 29%, 14%);
-  --black: hsl(0, 0%, 7%);
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    display: grid;
-    background-color: var(--grey-100);
-    place-items: center;
-    padding: 3em;
-    height: 100vh;
-}
-
-.cards {
-    display: grid;
-    place-items: center;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-template-areas: 
-    "daniel daniel jonathan kira"
-    "jeanette patrick patrick kira";
-    gap: 2em;
-}
-
-.card {
-    border-radius: 8px;   
-    padding: 2em;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 1em;
-}
-
-.op {
-    display: grid;
-    justify-content: start;
-    grid-template-areas: "avatar name"
-    "avatar rank";
-    gap: 1em;
-}
-
-.avatar {
-    grid-area: avatar;
-    border-radius: 50%;
-    border: 2px solid white;
-}
-
-.name {
-    grid-area: name;
-}
-
-.rank {
-    grid-area: rank;
-}
-
-.daniel {
-    grid-area: daniel;
-    color: var(--white);
-    background-color: var(--purple-500);
-    background-image: url(./images/bg-pattern-quotation.svg);
-    background-repeat: no-repeat;
-    background-position: top right 40px;
-}
-
-.jonathan {
-    grid-area: jonathan;
-    color: var(--white);
-    background-color: var(--grey-400);
-}
-
-.jeanette {
-    grid-area: jeanette;
-    color: var(--grey-500);
-    background-color: var(--white);
-}
-
-.patrick {
-    grid-area: patrick;
-    color: var(--white);
-    background-color: var(--grey-500);
-}
-
-.kira {
-    grid-area: kira;
-    color: var(--grey-500);
-    background-color: var(--white);
-}
-
-@media all and (max-width: 1150px) {
-    .cards {
-        grid-template-rows: repeat(5, 1fr);
-        grid-template-columns: 1fr;
-        grid-template-areas: 
-        "daniel"
-        "jonathan"
-        "jeanette"
-        "patrick"
-        "kira";
-        gap: 1em;
-    }
-    .card {
-        max-width: 500px;
-    }
+:root { 
+  --purple-50: hsl(260, 100%, 95%); 
+  --purple-300: hsl(264, 82%, 80%); 
+  --purple-500: hsl(263, 55%, 52%); 
+ 
+  --white: hsl(0, 0%, 100%); 
+  --grey-100: hsl(214, 17%, 92%); 
+  --grey-200: hsl(0, 0%, 81%); 
+  --grey-400: hsl(224, 10%, 45%); 
+  --grey-500: hsl(217, 19%, 35%); 
+ 
+  --dark-blue: hsl(219, 29%, 14%); 
+  --black: hsl(0, 0%, 7%); 
+} 
+ 
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+} 
+ 
+body { 
+    display: grid; 
+    background-color: var(--grey-100); 
+    place-items: center; 
+    padding: 3em; 
+    min-height: 100vh; 
+} 
+ 
+.cards { 
+    display: grid; 
+    place-items: center; 
+    grid-template-columns: repeat(4, 1fr); 
+    grid-template-rows: repeat(2, 1fr); 
+    grid-template-areas:  
+    "daniel daniel jonathan kira" 
+    "jeanette patrick patrick kira"; 
+    gap: 2em; 
+} 
+ 
+.card { 
+    height: 100%; 
+    border-radius: 8px;    
+    padding: 2em; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    gap: 1em; 
+} 
+ 
+.op { 
+    display: grid; 
+    justify-content: start; 
+    grid-template-areas: "avatar name" 
+    "avatar rank"; 
+    gap: 1em; 
+} 
+ 
+.avatar { 
+    max-width: 40px; 
+    grid-area: avatar; 
+    border-radius: 50%; 
+    border: 2px solid white; 
+} 
+ 
+.name { 
+    grid-area: name; 
+} 
+ 
+.rank { 
+    grid-area: rank; 
+} 
+ 
+.daniel { 
+    grid-area: daniel; 
+    color: var(--white); 
+    background-color: var(--purple-500); 
+    background-image: url(./images/bg-pattern-quotation.svg); 
+    background-repeat: no-repeat; 
+    background-position: top right 40px; 
+} 
+ 
+.jonathan { 
+    grid-area: jonathan; 
+    color: var(--white); 
+    background-color: var(--grey-400); 
+} 
+ 
+.jeanette { 
+    grid-area: jeanette; 
+    color: var(--grey-500); 
+    background-color: var(--white); 
+} 
+ 
+.patrick { 
+    grid-area: patrick; 
+    color: var(--white); 
+    background-color: var(--grey-500); 
+} 
+ 
+.kira { 
+    grid-area: kira; 
+    color: var(--grey-500); 
+    background-color: var(--white); 
+} 
+ 
+@media all and (max-width: 1150px) { 
+    .cards { 
+        grid-template-rows: auto; 
+        grid-template-columns: 1fr; 
+        grid-template-areas:  
+        "daniel" 
+        "jonathan" 
+        "jeanette" 
+        "patrick" 
+        "kira"; 
+        gap: 1em; 
+    } 
+    .card { 
+        max-width: 500px; 
+    } 
 }
