@@ -1,179 +1,193 @@
-:root {
-  --purple-100: hsl(254, 88%, 90%);
-  --purple-500: hsl(256, 67%, 59%);
-  --gray: hsl(0, 0%, 93%);
-  --yellow-100: hsl(31, 66%, 93%);
-  --yellow-500: hsl(39, 100%, 71%);
-
-  --white: hsl(0, 0%, 100%);
-  --black: hsl(0, 0%, 7%);
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    padding: 4em;
-    background-color: var(--gray);
-    display: grid;
-    place-items: center;
-    gap: 2em;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(6, 1fr);
-    grid-template-areas: 
-    "create social social schedule"
-    "create social social schedule"
-    "create manage maintain schedule"
-    "write manage maintain schedule"
-    "write audience grow grow"
-    "write audience grow grow";
-    min-height: 100vh;
-    font-family: "DM Sans";
-    height: 100%;
-    font-size: 18px;
-}
-
-img {
-    max-width: 100%;
-    display: block;
-}
-
-
-h2 {
-    font-weight: 500;
-    font-size: 32px;
-}
-
-.card {
-    gap: 1em;
-    display: grid;
-    border-radius: 16px;
-    height: 100%;
-    place-items: center;
-    width: 100%;
-    padding: 2em;
-}
-
-.create {
-    background-color: var(--yellow-100);
-    grid-area: create;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1em;
-}
-
-.create span {
-    color: var(--purple-500);
-    font-style: italic;
-}
-
-
-.social {
-    background-color: var(--purple-500);
-    grid-area: social;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    padding: 5em;
-    color: var(--white);
-}
-.social > h1 {
-    font-size: 64px;
-    margin-bottom: 0.5em;
-    font-weight: 500;
-}
-.social > img {
-    max-height: 2em;
-}
-.social span {
-    color: var(--yellow-500)
-}
-
-
-.write {
-    background-color: var(--yellow-500);
-    grid-area: write;
-    place-items: center;
-}
-
-
-
-
-
-.schedule {
-    background-color: var(--purple-100);
-    grid-area: schedule;
-}
-.schedule > img {
-    margin-right: -6em;
-}
-
-
-.manage {
-    background-color: var(--white);
-    grid-area: manage;
-}
-.audience {
-    background-color: var(--white);
-    grid-area: audience;
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    gap: 2em;
-}
-.audience > h2 {
-    font-size: 100px;
-    text-align: left;
-}
-
-
-.grow {
-    background-color: var(--purple-500);
-    grid-area: grow;
-    color: var(--white);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.maintain {
-    background-color: var(--yellow-500);
-    grid-area: maintain;
-}
-
-
-@media all and (max-width: 1450px) {
-    body {
-        grid-template-rows: auto;
-        grid-template-columns: 1fr;
-        grid-template-areas: 
-        "social"
-        "manage"
-        "maintain"
-        "schedule"
-        "grow"
-        "audience"
-        "create"
-        "write";
-    }
-    .card {
-        max-width: 800px;
-        gap: 1em;
-        justify-content: center;
-        align-items: center;
-    }
-    .grow {
-        flex-direction: column  ;
-    }
-    .schedule img {
-        margin: 0;
-    }
-    img {
-        max-width: 400px;
-    }
+:root { 
+  --purple-100: hsl(254, 88%, 90%); 
+  --purple-500: hsl(256, 67%, 59%); 
+  --gray: hsl(0, 0%, 93%); 
+  --yellow-100: hsl(31, 66%, 93%); 
+  --yellow-500: hsl(39, 100%, 71%); 
+ 
+  --white: hsl(0, 0%, 100%); 
+  --black: hsl(0, 0%, 7%); 
+} 
+ 
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+} 
+ 
+body { 
+    padding: 4em; 
+    background-color: var(--gray); 
+    display: grid; 
+    place-items: center; 
+    min-height: 100vh; 
+    font-family: "DM Sans"; 
+} 
+ 
+main { 
+    max-width: 1500px; 
+    display: grid; 
+    gap: 2em; 
+    grid-template-columns: repeat(4, 1fr); 
+    grid-template-rows: 300px 100px 200px 300px; 
+    grid-template-areas:  
+    "create social social schedule"  
+    "create manage maintain schedule"  
+    "write manage maintain schedule"  
+    "write audience grow grow"; 
+} 
+ 
+img { 
+    width: 100%; 
+    max-width: 250px; 
+} 
+ 
+ 
+h2 { 
+    font-weight: 500; 
+    font-size: 2rem; 
+} 
+ 
+.card { 
+    gap: 1em; 
+    display: grid; 
+    border-radius: 16px; 
+    height: 100%; 
+    place-items: center; 
+    width: 100%; 
+    padding: 2em; 
+} 
+ 
+.create { 
+    background-color: var(--yellow-100); 
+    grid-area: create; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    gap: 1em; 
+} 
+ 
+.create span { 
+    color: var(--purple-500); 
+    font-style: italic; 
+} 
+ 
+ 
+.social { 
+    background-color: var(--purple-500); 
+    grid-area: social; 
+    text-align: center; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    padding: 1em; 
+    color: var(--white); 
+} 
+.social > h1 { 
+    font-size: 48px; 
+    font-weight: 500; 
+} 
+ 
+.social span { 
+    color: var(--yellow-500) 
+} 
+ 
+ 
+.write { 
+    background-color: var(--yellow-500); 
+    grid-area: write; 
+    place-items: center; 
+} 
+ 
+.schedule { 
+    background-color: var(--purple-100); 
+    grid-area: schedule; 
+    overflow: clip; 
+} 
+.schedule > img { 
+    max-width: 160%; 
+    position: relative; 
+    left: 80px; 
+    width: auto; 
+} 
+ 
+.manage { 
+    background-color: var(--white); 
+    grid-area: manage; 
+    overflow: clip; 
+} 
+ 
+.manage img { 
+   max-width: 160%; 
+    width: auto; 
+    position: relative; 
+    left: 75px; 
+} 
+.audience { 
+    background-color: var(--white); 
+    grid-area: audience; 
+    text-align: left; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: start; 
+    align-items: start; 
+    gap: 1em; 
+} 
+.audience > h2 { 
+    font-size: 56px; 
+    text-align: left; 
+} 
+ 
+.grow { 
+    background-color: var(--purple-500); 
+    grid-area: grow; 
+    color: var(--white); 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+} 
+.maintain { 
+    background-color: var(--yellow-500); 
+    grid-area: maintain; 
+    overflow: clip; 
+} 
+ 
+ 
+@media all and (max-width: 1450px) { 
+    main { 
+        grid-template-rows: auto; 
+        grid-template-columns: 1fr; 
+        grid-template-areas:  
+        "social" 
+        "manage" 
+        "maintain" 
+        "schedule" 
+        "grow" 
+        "audience" 
+        "create" 
+        "write"; 
+    } 
+    .card { 
+        max-width: 800px; 
+        gap: 1em; 
+        justify-content: center; 
+        align-items: center; 
+        padding: 1em; 
+    } 
+    .grow { 
+        flex-direction: column ; 
+    } 
+    .schedule img { 
+        margin: 0; 
+    } 
+    img { 
+        max-width: auto; 
+        max-height: 250px; 
+    } 
+    .schedule > img, 
+    .manage img { 
+        left: 0; 
+    } 
 }
